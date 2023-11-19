@@ -1,0 +1,31 @@
+.trending {
+  padding: 80px 0px;
+  @include center-items;
+  flex-direction: column;
+  .trending-container {
+    display: flex;
+    flex-direction: column;
+    gap:60px;
+    .headline {
+      width: 1050px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h2 {
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 120%;
+      }
+      p {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 160%;
+      }
+    }
+    .card-collection{
+        display: flex;
+        gap:30px;
+    }
+  }
+}
