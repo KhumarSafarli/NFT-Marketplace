@@ -1,0 +1,20 @@
+.get-started {
+  display: flex;
+  width: 224px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background-color: #a259ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  &:hover{
+    transform: scale(0.9);
+  }
+}
