@@ -5,11 +5,18 @@
   @include for-size(tablet){
     padding: 40px 0px;
   }
+  @include for-size(mobile){
+    justify-content: center;
+    
+  }
   .trending-container {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap:60px;
+    @include for-size(mobile){
+      width: 315px;
+    }
     .headline {
       width: 100%;
       display: flex;
@@ -34,6 +41,11 @@
             @include for-size(tablet){
                 display: none;
             }
+        }
+        .card:nth-child(2){
+          @include for-size(mobile){
+            display: none;
+        }
         }
     }
   }
