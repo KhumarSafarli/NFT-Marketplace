@@ -1,0 +1,85 @@
+.hero-section {
+  display: flex;
+  padding: 80px 195px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  @include for-size(tablet){
+    padding: 80px 0px;
+    gap: 20px;
+  }
+
+  .hero-container {
+    width: 1050px;
+    margin-left: -80px;
+    margin-right: -80px;
+    display: flex;
+    gap:30px;
+    @include for-size(tablet){
+        width: 690px;
+        margin: 0px;
+    }
+    
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 510px;
+      @include for-size(tablet){
+        width: 330px;
+    }
+      h1 {
+        font-size: 67px;
+        font-weight: 600;
+        line-height: 110%;
+        text-transform: capitalize;
+        @include for-size(tablet){
+            font-size: 38px;
+        }
+      }
+      p {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 160%;
+        text-transform: capitalize;
+        @include for-size(tablet){
+            font-size: 16px;
+        }
+      }
+      .info-tags {
+        @include center-items;
+        gap: 30px;
+        .sale,
+        .auctions,
+        .artists {
+          width: 150px;
+
+          p{
+            font-size: 23.99px;
+            @include for-size(tablet){
+                font-size: 16px;
+            }
+          }
+        }
+        h3 {
+          font-family: "Space Mono";
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 140%;
+          text-transform: capitalize;
+          @include for-size(tablet){
+            font-size: 22px;
+        }
+        }
+      }
+    }
+    .right {
+      img {
+        width: 510px;
+        @include for-size(tablet){
+            width: 330px;
+        }
+      }
+    }
+  }
+}
