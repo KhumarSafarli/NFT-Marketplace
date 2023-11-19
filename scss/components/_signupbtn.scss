@@ -1,0 +1,17 @@
+.signup{
+    width: 152px;
+    height: 60px;
+    background-color: #A259FF;
+    padding: 0px 30px;
+    border-radius: 20px;
+    @include center-items;
+    font-size: 16px;
+    line-height: 140%;
+    justify-content: center;
+    border: 2px solid transparent;
+    gap:12px;
+    &:hover{
+        background-color: transparent;
+        border-color:#A259FF;
+    }
+}
