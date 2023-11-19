@@ -18,8 +18,7 @@
     transform: scale(0.9);
   }
   @include for-size(mobile){
-    position: absolute;
-    transform: translateY(549px);
-    width: 315px;
+  visibility: hidden;
+  height: 0px;
   }
 }
