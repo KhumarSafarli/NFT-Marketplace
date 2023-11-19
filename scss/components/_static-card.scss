@@ -1,0 +1,44 @@
+.card {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(0.94);
+    }
+  }
+  .small-imgs {
+    @include center-items;
+    gap: 15px;
+
+    .more {
+      width: 100px;
+      height: 100px;
+      background-color: #a259ff;
+      border: none;
+      border-radius: 20px;
+     @include button-font-style;
+      transition:  0.3s ;
+      cursor: pointer;
+      &:hover {
+        transform: scale(0.94);
+      }
+    }
+    
+  }
+  .artist-info{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    h4{
+        font-size: 22px;
+    }
+    .account-name{
+        @include center-items;
+        gap:12px;
+    }
+}
+}
