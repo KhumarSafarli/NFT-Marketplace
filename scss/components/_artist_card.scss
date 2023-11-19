@@ -1,0 +1,38 @@
+.artist-card {
+  width: 240px;
+  height: 238px;
+  background-color: #3b3b3b;
+  border-radius: 20px;
+  padding: 20px;
+  @include center-items;
+  flex-direction: column;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover{
+    transform: scale(0.94);
+  }
+  .user-avatar {
+    margin-bottom: 20px;
+  }
+  h5 {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin-bottom: 5px;
+  }
+  .top-sales {
+    @include center-items;
+    gap: 10px;
+
+    .total {
+      color: #858584;
+    }
+    .sales {
+      font-family: "Space Mono";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+  }
+}
