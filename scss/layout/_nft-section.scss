@@ -1,0 +1,101 @@
+.nft-section {
+  height: auto;
+  background-image: url(../../assets/images/mushroom-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: 50% 50%;
+  align-self: stretch;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    mix-blend-mode: normal;
+  
+@include for-size(tablet){
+    align-self: stretch;
+}
+
+  .gradient-layer {
+    @include center-items;
+    align-self: stretch;
+    background: linear-gradient(
+      180deg,
+      rgba(162.00005114078522, 89.00000989437103, 255, 0) 0%,
+      rgb(162.00000554323196, 89.00000229477882, 255) 100%
+    );
+    background-color: transparent;
+    height: auto;
+    padding: 360px 195px 60px;
+    height: 690px;
+    width: 100%;
+    justify-content: center;
+   
+    
+    .content{
+        display: flex;
+        @include for-size(tablet){
+            width: 670px;
+        }
+        @include for-size(mobile){
+            width: 315px;
+            flex-direction: column;
+            gap:30px;
+        }
+    }
+
+    .nft-information {
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      align-self: stretch;
+      flex-direction: column;
+      gap: 30px;
+      width: 755px;
+
+      .artist {
+        @include center-items;
+        padding: 10px 20px;
+        gap: 12px;
+        border-radius: 20px;
+        background-color: #3b3b3b;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(0.94);
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+      }
+      .see-nft {
+        @include center-all-elements;
+        height: 60px;
+        padding: 22px 50px;
+        gap: 12px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(0.94);
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        @include for-size(mobile){
+            width: 315px;
+        }
+      }
+      h1 {
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+      }
+    }
+    
+  }
+}
