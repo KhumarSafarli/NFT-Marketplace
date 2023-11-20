@@ -1,0 +1,65 @@
+.discover-section {
+  @include center-all-elements;
+  padding: 80px 195px;
+  @include for-size(tablet){
+    padding: 40px 195px 80px 195px;
+  }
+  .discover-container {
+    width: 1050px;
+ @include center-items;
+ 
+ flex-direction: column;
+ gap:60px;
+ @include for-size(tablet){
+  width: 690px;
+}
+@include for-size(mobile){
+  width: 315px;
+}
+    .discover-headline {
+      @include center-items;
+      gap: 100px;
+      @include for-size(tablet){
+        width: 690px;
+      }
+      @include for-size(mobile){
+        width: 315px;
+      }
+
+      .see-all{
+        @include for-size(mobile){
+          display: none;
+        }
+      }
+      .left {
+        width: 763px;
+        h2 {
+          font-size: 38px;
+          font-weight: 600;
+          line-height: 120%;
+        }
+        p {
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 160%;
+        }
+      }
+    }
+    .nft-container{
+        display: flex;
+        gap:30px;
+        @include for-size(mobile){
+          flex-direction: column;
+        }
+        .nft-card:last-child{
+          @include for-size(tablet){
+            display: none;
+          }
+          @include for-size(mobile){
+            display: initial;
+          }
+        }
+       
+    }
+  }
+}
