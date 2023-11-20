@@ -1,0 +1,19 @@
+.see-all {
+  height: 60px;
+  border: 2px solid #a259ff;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 0px 50px;
+  color: white;
+  @include center-items;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
