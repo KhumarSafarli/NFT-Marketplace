@@ -1,0 +1,36 @@
+.browse {
+  @include center-all-elements;
+  padding: 80px 195px;
+  .browse-container {
+   display: flex;
+    gap:60px;
+    flex-direction: column;
+    width: 1050px;
+    @include for-size(tablet){
+        width: 690px;
+        gap:40px;
+    }
+    @include for-size(mobile){
+        width: 315px;
+    }
+    .browse-headline {
+      h2 {
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 120%;
+
+        @include for-size(tablet){
+            font-size: 28px;
+        }
+      }
+    }
+    .browse-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap:30px;
+        @include for-size(mobile){
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+  }
+}
