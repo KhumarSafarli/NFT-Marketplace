@@ -1,0 +1,45 @@
+.collection-card {
+  width: 240px;
+  height: 316px;
+  border-radius: 20px;
+  background-color: #3b3b3b;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover{
+    transform: scale(0.94);
+  }
+  .image-section {
+    width: 240px;
+    height: 240px;
+    position: relative;
+   
+    .blur-layer {
+      width: 240px;
+      height: 240px;
+      background-color: white;
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px;
+      position: absolute;
+      z-index: 7;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(7px);
+    }
+    .icon{
+        position: absolute;
+        z-index: 90;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+  }
+
+  .bottom-part {
+    padding: 20px 30px 25px 30px;
+    h5 {
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%;
+    }
+  }
+}
