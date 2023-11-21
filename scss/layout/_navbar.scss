@@ -2,18 +2,30 @@ header {
   width: 100%;
   height: 100px;
   padding: 20px 50px;
-  @include for-size(tablet){
+  @include for-size(tablet) {
     padding: 15px 50px;
   }
-  @include for-size(mobile){
+  @include for-size(mobile) {
     padding: 15px 30px;
   }
   .navbar-container {
     .navbar {
       @include center-items;
       justify-content: space-between;
-      .left-side{
+      .left-side {
+        display: flex;
         cursor: pointer;
+        gap: 12px;
+        align-items: center;
+
+        a {
+          text-decoration: none;
+          font-family: "Space Mono";
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 160%;
+          color: white;
+        }
       }
       .right-side {
         @include center-items;
@@ -22,19 +34,19 @@ header {
           @include navbar-page-link-style;
           transition: 0.3s;
 
-          &:hover{
+          &:hover {
             transform: scale(1.1);
-            color: #A259FF;
+            color: #a259ff;
           }
-          @include for-size(tablet){
+          @include for-size(tablet) {
             display: none;
+          }
         }
-        }
-        .sidebar-icon{
-            display: none;
-            @include for-size(tablet){
-                display: initial;
-            }
+        .sidebar-icon {
+          display: none;
+          @include for-size(tablet) {
+            display: initial;
+          }
         }
       }
     }

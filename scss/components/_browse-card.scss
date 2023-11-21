@@ -7,6 +7,7 @@
   transition: 0.3s;
   &:hover{
     transform: scale(0.94);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
   @include for-size(tablet){
     width: 150px;
@@ -25,7 +26,12 @@
         @include for-size(tablet){
             width: 150px;
             height: 142px;
+            border-radius: 20px;
         }
+        @include for-size(tablet){
+          width: 150px;
+          
+      }
     }
    
     .blur-layer {

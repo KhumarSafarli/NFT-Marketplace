@@ -1,0 +1,72 @@
+@mixin center-items {
+  display: flex;
+  align-items: center;
+}
+@mixin for-size($screen) {
+  @if $screen ==tablet {
+    @media screen and (max-width: 1050px) {
+      @content;
+    }
+  } @else if $screen ==mobile {
+    @media screen and (max-width: 690px) {
+      @content;
+    }
+  }
+}
+
+@mixin center-all-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin navbar-page-link-style {
+  padding: 0px 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  text-decoration: none;
+}
+@mixin button-font-style {
+  color: #fff;
+  text-align: center;
+  font-family: "Space Mono";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 160%;
+  text-transform: capitalize;
+}
+@mixin view-ranking-btn-font{
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+}
+@mixin info-tags-template{
+  @include center-items;
+  gap: 30px;
+  .sale,
+  .auctions,
+  .artists {
+    width: 150px;
+
+    p{
+      font-size: 23.99px;
+      @include for-size(tablet){
+          font-size: 16px;
+      }
+    }
+  }
+  h3 {
+    font-family: "Space Mono";
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 140%;
+    text-transform: capitalize;
+    @include for-size(tablet){
+      font-size: 22px;
+  }
+  }
+}

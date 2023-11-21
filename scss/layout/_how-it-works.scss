@@ -1,6 +1,10 @@
 .how-it-works {
   @include center-all-elements;
   padding: 80px 195px;
+
+  @include for-size(mobile){
+    padding: 40px 195px;
+  }
   .work-container {
     width: 1050px;
     display: flex;

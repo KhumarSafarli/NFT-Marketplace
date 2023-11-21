@@ -1,6 +1,9 @@
 .browse {
   @include center-all-elements;
   padding: 80px 195px;
+  @include for-size(mobile){
+    padding: 40px 0px;
+  }
   .browse-container {
    display: flex;
     gap:60px;
@@ -12,6 +15,7 @@
     }
     @include for-size(mobile){
         width: 315px;
+        gap:20px;
     }
     .browse-headline {
       h2 {
@@ -30,6 +34,7 @@
         gap:30px;
         @include for-size(mobile){
             grid-template-columns: repeat(2, 1fr);
+            gap:20px;
         }
     }
   }

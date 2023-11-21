@@ -6,10 +6,25 @@
   @include for-size(tablet){
     padding: 40px 0px;
   }
+
+  .view-bottom{
+    visibility: hidden;
+    height: 0;
+    @include for-size(mobile){
+      visibility: visible;
+      height: 60px;
+    }
+  }
   .toprated-container{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
     @include for-size(tablet){
+      gap: 40px;
       width: 690px;
-      
+    }
+    @include for-size(mobile){
+      width: 315px;
     }
   }
   .top-part {
@@ -18,12 +33,18 @@
     width: 1050px;
     @include for-size(tablet){
       width: 690px;
-      margin-bottom: 40px;
     }
+    @include for-size(mobile){
+      width: 315px;
+    }
+    
     .left {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      @include for-size(mobile){
+        width: 315px;
+      }
       h3 {
         font-size: 38px;
         font-weight: 600;
@@ -38,6 +59,7 @@
         line-height: 160%;
         @include for-size(tablet){
           font-size: 16px;
+          width: 315px;
         }
       }
     }
@@ -50,6 +72,10 @@
       @include for-size(tablet){
         grid-template-columns: repeat(2, 1fr);
       gap: 30px;
+      }
+      @include for-size(mobile){
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
       }
   }
 }

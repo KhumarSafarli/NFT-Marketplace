@@ -75,6 +75,10 @@
       display: flex;
       flex-direction:column;
       gap:40px;
+      @include for-size(tablet) {
+        width: 315px;
+      }
+
       .gif {
         width: 510px;
         @include for-size(tablet) {

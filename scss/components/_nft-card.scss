@@ -10,8 +10,18 @@
   transition: 0.3s;
   cursor: pointer;
 
+  @include for-size(mobile){
+    width: 315px;
+  }
+  .head{
+    @include for-size(mobile){
+      width: 315px;
+    }
+  }
+
   &:hover{
     transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
 .info-part{
     padding: 20px 30px 25px 30px;

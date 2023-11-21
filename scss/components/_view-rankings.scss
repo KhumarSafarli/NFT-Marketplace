@@ -1,5 +1,23 @@
-.view {
+.view{
  @include center-all-elements;
+  height: 60px;
+  padding: 0px 50px;
+  gap: 12px;
+  border-radius: 20px;
+  border: 2px solid #a259ff;
+  background-color: transparent;
+ @include view-ranking-btn-font;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover{
+    transform: scale(0.95);
+  }
+  @include for-size(mobile){
+    display: none;
+  }
+}
+.view-bottom{
+  @include center-all-elements;
   height: 60px;
   padding: 0px 50px;
   gap: 12px;

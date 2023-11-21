@@ -8,6 +8,7 @@
     @include for-size(mobile){
         flex-direction: column;
     }
+    
 .left{
     background-image: url(../../assets/images/createaccountimg.png);
     background-size: cover;
@@ -30,6 +31,22 @@
         flex-direction: column;
       flex: 1;
         gap:40px;
+
+        .toast.notification {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background-color: #333;
+          color: #fff;
+          padding: 15px;
+          border-radius: 5px;
+          display: none;
+          transition: opacity 0.5s ease-in-out;
+  
+          &.show {
+            display: block;
+          }
+        }
         @include for-size(tablet){
             width: 397px;
         }

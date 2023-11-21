@@ -2,22 +2,29 @@ form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 330px;
   .name,
   .mail,
   .password,
   .repeat-password,
   .submit {
     height: 46px;
-    width: 330px;
+   
     background-color: white;
     @include center-items;
     gap: 12px;
     padding: 16px 20px;
     border-radius: 20px;
     border: 1px solid #858584;
+
+    @include for-size(tablet){
+        width: 325px;
+    }
+
+   
   }
   input {
-    width: 100%;
+    
     font-size: 16px;
     font-weight: 400;
     line-height: 140%;

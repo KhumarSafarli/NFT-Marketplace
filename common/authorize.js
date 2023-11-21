@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
     registerAccount();
+
   });
 
   function isEmailValid(email) {
