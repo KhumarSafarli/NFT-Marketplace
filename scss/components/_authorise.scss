@@ -1,0 +1,45 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  .name,
+  .mail,
+  .password,
+  .repeat-password,
+  .submit {
+    height: 46px;
+    width: 330px;
+    background-color: white;
+    @include center-items;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 20px;
+    border: 1px solid #858584;
+  }
+  input {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    border: none;
+    outline: none;
+  }
+  .submit {
+    @include center-all-elements;
+    color: white;
+    background-color: #a259ff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid transparent;
+
+    &:hover{
+        transform: scale(0.95);
+        border-color: rgb(255, 158, 247);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  }
+}
