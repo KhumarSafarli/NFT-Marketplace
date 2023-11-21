@@ -1,0 +1,42 @@
+.subscribe {
+  margin-top: 70px;
+  display: flex;
+  height: 60px;
+  padding: 16px 0px 16px 20px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background-color: white;
+
+  .email {
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #2b2b2b;
+    outline: none;
+  }
+
+  .submit-btn {
+    @include center-items;
+    background-color: #a259ff;
+    height: 60px;
+    padding: 0px 50px;
+    gap: 12px;
+    border-radius: 20px;
+    width: 215px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+        transform: translateX(12px);
+    }
+    .submit{
+        background-color: transparent;
+        border: none;
+        color:white;
+        cursor: pointer;
+      
+    }
+  }
+}
