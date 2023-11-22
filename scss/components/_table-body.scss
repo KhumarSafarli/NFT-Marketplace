@@ -1,6 +1,5 @@
 .table-body {
        
-        
     .artist-info {
       display: flex;
       width: 1050px;
@@ -18,20 +17,46 @@
         border-color: #00AC4F;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
       }
+      @include for-size(tablet){
+        width: 690px;
+        
+      }
+      @include for-size(mobile){
+        width: 315px;
+        height: 50px;
+        gap:13px;
+        
+      }
+
       .id-avatar {
         display: flex;
         gap: 20px;
         align-items: center;
+        @include for-size(mobile){
+           gap: 10px;
+           
+          }
 
         .name {
           font-size: 22px;
           font-weight: 600;
           line-height: 140%;
+
+          @include for-size(mobile){
+            font-size: 16px;
+            font-weight: 400;
+            width: 131px;
+          }
         }
         .avatar {
           img {
             width: 60px;
             height: 60px;
+            @include for-size(tablet){
+                width: 24px;
+                height: 24px;
+                background-color:transparent;
+              }
           }
         }
         .id {
@@ -45,6 +70,17 @@
           font-weight: 400;
           line-height: 140%;
           color: #858584;
+
+          @include for-size(tablet){
+            width: 10px;
+            height: 10px;
+            background-color:transparent;
+          }
+          @include for-size(mobile){
+            width: 8px;
+            height: 13px;
+         
+          }
         }
       }
       .status {
@@ -59,7 +95,26 @@
           font-size: 16px;
           font-weight: 400;
           line-height: 140%;
+
+          @include for-size(tablet){
+            width: 100px;
+          }
+          @include for-size(mobile){
+            font-size: 12px;
+          }
         }
+        
+        .sold{
+            @include for-size(tablet){
+                display: none;
+            }
+        }
+        .change{
+            @include for-size(mobile){
+                display: none;
+            } 
+        }
+       
         .change{
           color:#00AC4F;
         }
