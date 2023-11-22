@@ -1,0 +1,109 @@
+.ranking-page {
+  @include center-items;
+  justify-content: center;
+  .ranking-container {
+    width: 1050px;
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h1 {
+        font-size: 51px;
+        font-weight: 600;
+        line-height: 110%;
+      }
+      p {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 160%;
+      }
+    }
+    .navigation-items {
+      @include center-items;
+      justify-content: center;
+      gap: 30px;
+      text-align: center;
+      padding: 0px 30px;
+    
+
+      :first-child{
+        color:white;
+      }
+
+      p {
+        width: 262.5px;
+        height: 60px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 140%;
+        color: #858584;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+          color:#A259FF;
+        }
+      }
+    }
+    .table {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .thead {
+        display: flex;
+        width: 1050px;
+        height: 46px;
+        padding: 12px 0px;
+        align-items: center;
+        gap: 50px;
+        border-radius: 20px;
+        border: 1px solid #3b3b3b;
+
+        p{
+          cursor: pointer;
+
+          &:hover{
+            color:#00AC4F;
+          }
+        }
+        .artist {
+          padding: 0px 20px;
+          width: 430px;
+          display: flex;
+          gap: 20px;
+
+          th {
+            font-family: "Space Mono";
+            font-size: 16px;
+            color: #858584;
+            font-weight: 400;
+            line-height: 140%;
+          }
+        }
+        .rest {
+          display: flex;
+          gap: 20px;
+          justify-content: space-between;
+          padding: 0px 20px;
+          p {
+            width: 160px;
+            font-family: "Space Mono";
+            font-size: 16px;
+            color: #858584;
+            font-weight: 400;
+            line-height: 140%;
+            &:hover{
+              color:#00AC4F;
+            }
+          }
+        }
+      }
+     
+    }
+  }
+}
