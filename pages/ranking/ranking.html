@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rankings</title>
+    <link rel="stylesheet" href="../../scss/main.css" />
+    <script defer src="../../common/constants.js"></script>
+    <script defer src="./ranking.js"></script>
+    <script defer src="../../backend/server/fake-data/index.js"></script>
+  </head>
+  <header>
+    
+    <div class="navbar-container">
+      <div class="navbar">
+        <div class="left-side">
+          <img src="../../assets/icons/logo.svg" />
+          <a href="../../home.html">NFT Marketplace</a>
+        </div>
+        <div class="right-side">
+          <a href="">Marketplace</a>
+          <a href="">Rankings</a>
+          <a href="../login.html" class="login">Login</a>
+          <a href="../signup.html" class="signup"
+            ><img src="../../assets/icons/user.svg" /> Sign Up</a
+          >
+          <img src="../../assets/icons/burger.svg" class="sidebar-icon" />
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="ranking-page">
+      <div class="ranking-container">
+        <div class="header">
+          <h1>Top Creators</h1>
+          <p>Check out top ranking NFT artists on the NFT Marketplace.</p>
+        </div>
+        <div class="navigation-items">
+          <p>Today</p>
+          <p>This Week</p>
+          <p>This Month</p>
+          <p>All Time</p>
+        </div>
+        <div class=table>
+          <div class=thead>
+            <div class="artist">
+              <p class="sort-id">#</p>
+              <p class="sort-artist">Artist</p>
+            </div>
+            <div class="rest">
+              <p class="sort-change">Change</p>
+              <p class="sort-nft-sold">NFT's Sold</p>
+              <p class="sort-volume">Volume</p>
+            </div>
+          </div>
+          <div class=table-body>
+            <!-- <div class="artist-info">
+              <div class="id-avatar">
+                <div class="id">1</div>
+                <div class="avatar">
+                  <img src="../../assets/images/avatar2.png" class="creator-avatar" />
+                </div>
+                <div class="name">Emerson Carder</div>
+                </div>
+              <div class="status">
+                <div class="change">+1.41%</div>
+                <div class="sold">602</div>
+                <div class="volume">12.4 ETH</div>
+              </div>
+               
+            </div> -->
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
