@@ -1,0 +1,68 @@
+.table-body {
+       
+        
+    .artist-info {
+      display: flex;
+      width: 1050px;
+      height: 84px;
+      padding: 12px 20px;
+      align-items: center;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      background-color: #3b3b3b;
+      justify-content: space-between;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.01);
+        border-color: #00AC4F;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+      .id-avatar {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .name {
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 140%;
+        }
+        .avatar {
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        .id {
+          border-radius: 20px;
+          width: 30px;
+          height: 30px;
+          background-color: #2b2b2b;
+          @include center-all-elements;
+          font-family: "Space Mono";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 140%;
+          color: #858584;
+        }
+      }
+      .status {
+        display: flex;
+        gap: 20px;
+
+        .change,
+        .sold,
+        .volume {
+          width: 160px;
+          font-family: "Space Mono";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 140%;
+        }
+        .change{
+          color:#00AC4F;
+        }
+      }
+    }
+  }
