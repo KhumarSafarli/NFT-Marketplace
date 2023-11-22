@@ -7,6 +7,17 @@
     display: flex;
     flex-direction: column;
 
+    @include for-size(tablet){
+      width: 690px;
+      padding: 40px 0px;
+    }
+    @include for-size(mobile){
+      width: 315px;
+      padding: 30px 0px;
+    
+    }
+
+
     .header {
       display: flex;
       flex-direction: column;
@@ -16,11 +27,18 @@
         font-size: 51px;
         font-weight: 600;
         line-height: 110%;
+        @include for-size(tablet){
+          font-size: 38px;
+        }
       }
       p {
         font-size: 22px;
         font-weight: 400;
         line-height: 160%;
+
+        @include for-size(tablet){
+          font-size: 16px;
+        }
       }
     }
     .navigation-items {
@@ -29,6 +47,11 @@
       gap: 30px;
       text-align: center;
       padding: 0px 30px;
+
+      @include for-size(tablet){
+        padding: 0px 10px;
+        gap:10px;
+      }
     
 
       :first-child{
@@ -48,6 +71,9 @@
         &:hover{
           color:#A259FF;
         }
+        @include for-size(tablet){
+          font-size: 16px;
+        }
       }
     }
     .table {
@@ -63,6 +89,15 @@
         gap: 50px;
         border-radius: 20px;
         border: 1px solid #3b3b3b;
+        @include for-size(tablet){
+         width: 690px;
+          gap:10px;
+        }
+        @include for-size(mobile){
+          width: 315px;
+           gap:10px;
+         }
+       
 
         p{
           cursor: pointer;
@@ -76,6 +111,13 @@
           width: 430px;
           display: flex;
           gap: 20px;
+          @include for-size(tablet){
+            width: 410px;
+          }
+          @include for-size(mobile){
+            width: 215px;
+          }
+
 
           th {
             font-family: "Space Mono";
@@ -90,6 +132,30 @@
           gap: 20px;
           justify-content: space-between;
           padding: 0px 20px;
+
+          @include for-size(mobile){
+            width: 100px;
+            padding: 0px;
+          }
+
+          .sort-nft-sold{
+            @include for-size(tablet){
+              display: none;
+            }
+          }
+          
+          .sort-change, .sort-volume{
+            @include for-size(tablet){
+              width: 100px;
+            }
+            
+            
+          }
+          .sort-change{
+            @include for-size(mobile){
+              display:none;
+            }
+          }
           p {
             width: 160px;
             font-family: "Space Mono";
@@ -100,6 +166,8 @@
             &:hover{
               color:#00AC4F;
             }
+
+            
           }
         }
       }
