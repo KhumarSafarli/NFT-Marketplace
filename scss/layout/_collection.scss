@@ -1,0 +1,76 @@
+.collection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .border-line {
+        width: 100%;
+        height: 1px;
+        background-color: #3b3b3b;
+    }
+
+    .collection-container {
+        @include center-all-elements;
+        width: 100%;
+
+        @include for-size(mobile){
+            width: 315px;
+        }
+
+        .created,
+        .owned,
+        .artist-collection {
+            @include center-all-elements;
+            height: 60px;
+            padding: 0px 30px;
+            gap: 16px;
+            flex: 1 0 0;
+            cursor: pointer;
+
+
+            &:hover p {
+                color: rgba(255, 255, 0, 0.42);
+            }
+@include for-size(mobile){
+    padding: 0px 10px;
+}
+            .quantity {
+                display: flex;
+                padding: 5px 10px;
+                align-items: center;
+                border-radius: 20px;
+                background-color: #858584;
+                font-family: "Space Mono";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+                @include for-size(mobile){
+                    display: none;
+                }
+            }
+
+            p {
+                color: #858584;
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 140%;
+                transition: 0.3s;
+
+                @include for-size(mobile){
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .created {
+            border-bottom: 3px solid #858584;
+
+            p {
+                color: white;
+
+            }
+        }
+
+    }
+}
