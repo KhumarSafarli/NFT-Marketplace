@@ -1,0 +1,164 @@
+.artist-info-section {
+  @include center-items;
+  padding: 40px 0px;
+  flex-direction: column;
+  gap: 30px;
+
+  @include for-size(tablet){
+    padding: 30px 0px;
+  }
+
+  .artist-container {
+    display: flex;
+    width: 1050px;
+    gap: 100px;
+
+    @include for-size(tablet){
+        width: 690px;
+        gap:30px;
+        flex-direction: column-reverse;
+    }
+    
+    @include for-size(mobile){
+        width: 315px;
+        gap:30px;
+        flex-direction: column-reverse;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 599px;
+      @include for-size(mobile){
+        width: 315px;
+        
+    }
+      .name {
+        font-size: 51px;
+        font-weight: 600;
+        line-height: 110%;
+
+        @include for-size(tablet){
+            font-size: 38px;
+        }
+      }
+      .stats {
+        display: flex;
+        width: 510px;
+        gap: 20px;
+        align-items: flex-start;
+        @include for-size(mobile){
+            width: 315px;
+            
+        }
+
+        .volume,
+        .sold,
+        .followers {
+          width: 100%;
+          h5 {
+            font-family: "Space Mono";
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 140%;
+
+            @include for-size(tablet){
+                font-size: 22px;
+            }
+          }
+          p {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 160%;
+            @include for-size(tablet){
+                font-size: 16px;
+            }
+          }
+        }
+      }
+      .bio {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .bio-head {
+          color: #858584;
+          font-family: "Space Mono";
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 160%;
+          @include for-size(tablet){
+            font-size: 16px;
+        }
+        }
+        .artist-bio {
+          font-family: "Work Sans";
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 160%;
+          @include for-size(tablet){
+            font-size: 16px;
+        }
+        }
+      }
+      .link {
+        p {
+          color: #858584;
+          font-family: "Space Mono";
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 160%;
+          @include for-size(tablet){
+            font-size: 16px;
+        }
+        }
+        .links {
+          @include center-items;
+          gap: 10px;
+        }
+      }
+    }
+    .right {
+      .copy-follow {
+        display: flex;
+        gap: 20px;
+
+        @include for-size(mobile){
+            flex-direction: column;
+        }
+
+        .chain-id {
+          width: 186px;
+          height: 60px;
+          padding: 0px 50px;
+          @include center-all-elements;
+          border-radius: 20px;
+          background-color: #a259ff;
+          cursor: pointer;
+          gap:10px;
+          transition: 0.3s;
+          &:hover {
+            transform: scale(0.95);
+          }
+          @include for-size(mobile){
+            width: 100%;
+          }
+        }
+        .follow {
+          @include center-all-elements;
+          height: 60px;
+          padding: 0px 30px;
+          gap: 12px;
+          border: 2px solid #a259ff;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}
