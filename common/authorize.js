@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showToast("Username is already used");
       } else {
         showToast("Username or Email already used");
-        console.log('Response data:', await response.json());
+        console.log( await response.json());
       }
     }
     registerAccount();
