@@ -15,7 +15,9 @@
 @include for-size(tablet){
     align-self: stretch;
 }
-
+@include for-size(mobile){
+  min-width: 375px;
+}
   .gradient-layer {
     @include center-items;
     align-self: stretch;

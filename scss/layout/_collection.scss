@@ -3,6 +3,9 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    @include for-size(mobile){
+        min-width: 375px;
+    }
 
     .border-line {
         width: 100%;
@@ -12,8 +15,10 @@
 
     .collection-container {
         @include center-all-elements;
-        width: 100%;
-
+        width: 1050px;
+        @include for-size(tablet){
+            width: 690px;
+        }
         @include for-size(mobile){
             width: 315px;
         }

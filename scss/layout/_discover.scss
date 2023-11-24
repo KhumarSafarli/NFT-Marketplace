@@ -4,6 +4,9 @@
   @include for-size(tablet){
     padding: 40px 195px 80px 195px;
   }
+  @include for-size(mobile){
+    min-width: 375px;
+}
   .discover-container {
     width: 1050px;
  @include center-items;

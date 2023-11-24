@@ -12,6 +12,9 @@
     @include for-size(tablet) {
       margin-top: 49px;
     }
+    @include for-size(mobile){
+      min-width: 375px;
+  }
   }
 
   .footer-container {

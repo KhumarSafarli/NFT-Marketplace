@@ -1,4 +1,7 @@
 .cover-section {
+  @include for-size(mobile){
+    min-width: 375px;
+}
   .cover-photo {
     align-items: center;
     align-self: stretch;

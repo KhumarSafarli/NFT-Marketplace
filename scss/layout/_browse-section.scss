@@ -3,6 +3,7 @@
   padding: 80px 195px;
   @include for-size(mobile){
     padding: 40px 0px;
+    min-width: 375px;
   }
   .browse-container {
    display: flex;
