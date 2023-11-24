@@ -1,0 +1,66 @@
+.cover-section {
+  .cover-photo {
+    align-items: center;
+    align-self: stretch;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+
+    .cover {
+      align-self: stretch;
+      background-color: transparent;
+      height: 320px;
+  width: 100%;
+      mix-blend-mode: normal;
+      object-fit: cover;
+      position: relative;
+
+      @include for-size(tablet){
+        height: 280px;
+    width: 100%;
+      }
+      @include for-size(mobile){
+        height: 250px;
+        min-width: 375px;
+      }
+    }
+    .artist-avatar-container{
+        align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    height: auto;
+    margin-top: -70px;
+    position: relative;
+    width: 1050px;
+
+    @include for-size(tablet){
+        width: 690px;
+    }
+    @include for-size(mobile){
+        width: 375px;
+        align-items: center;
+        justify-content: center;
+    }
+ .avatar-artist{
+   width: 120px;
+   height: 120px;
+   border: 2px solid #2B2B2B;
+   border-radius: 20px;
+   
+   position: relative;
+   
+   img{
+    background-color: transparent;
+    height: 120px;
+    min-width: 120px;
+    mix-blend-mode: normal;
+    position: relative;
+    @include center-all-elements;
+   }
+   
+ }
+    }
+  }
+}
