@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(error);
     });
 
+    
+
   function fillArtistCards(creators) {
     const artistsGrid = document.querySelector(".artists-grid");
     creators.forEach((creator) => {
@@ -48,29 +50,58 @@ document.addEventListener("DOMContentLoaded", function () {
       artistCard.appendChild(avatarImg);
       artistCard.appendChild(artInfo);
       artistsGrid.appendChild(artistCard);
+      
 
-      const endTime = new Date();
-      endTime.setHours(endTime.getHours() + 59);
-      const timerInterval = setInterval(updateTimer, 1000);
-      function updateTimer() {
-        const currentTime = new Date();
-        const remainingTime = endTime - currentTime;
-        if (remainingTime > 0) {
-          const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-          const minutes = Math.floor(
-            (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-          );
-          const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-          document.querySelector(".hours").textContent = addZero(hours);
-          document.querySelector(".minutes").textContent = addZero(minutes);
-          document.querySelector(".seconds").textContent = addZero(seconds);
-        } else {
-          clearInterval(timerInterval);
-        }
-      }
-      function addZero(num) {
-        return num < 10 ? "0" + num : num;
-      }
     });
   }
+  const subscribeWidget = document.querySelector(".subscribe-widget");
+  const subscribeButtonWidget = subscribeWidget.querySelector(".submit");
+  subscribeButtonWidget.addEventListener("click", handleSubscribe);
+  const pageFooter = document.querySelector(".page-footer");
+  const subscribeButtonFooter = pageFooter.querySelector(".submit");
+  subscribeButtonFooter.addEventListener("click", handleSubscribe);
+
+  function handleSubscribe(event) {
+    event.preventDefault();
+    const emailInput = event.target.parentElement.parentElement.querySelector(".email");
+    const email = emailInput.value.trim();
+    if (isValidEmail(email)) {
+      showSuccessToast("You successfully subscribed!");
+    } else {
+      showToast("Invalid email address");
+    }
+  };
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+  function showToast(message) {
+    Toastify({
+      text: message,
+      duration: 3000,
+      close: true,
+      gravity: 'top',
+      position: 'right',
+      stopOnFocus: true,
+      style: {
+        background: 'linear-gradient(to right, #e74c3c, #e74c3c)',
+      },
+    }).showToast();
+  }
+
+  function showSuccessToast(message) {
+    Toastify({
+      text: message,
+      duration: 3000,
+      close: true,
+      gravity: 'top',
+      position: 'right',
+      stopOnFocus: true,
+      style: {
+        background: 'linear-gradient(to right, #2ecc71, #27ae60)',
+      },
+    }).showToast();
+  }
 });
+
+
