@@ -45,6 +45,7 @@ header {
 @media screen and (max-width: 690px) {
   header {
     padding: 15px 30px;
+    min-width: 375px;
   }
 }
 header .navbar-container .navbar {
@@ -135,6 +136,7 @@ header .navbar-container .navbar .right-side .sidebar-icon {
 @media screen and (max-width: 690px) {
   .hero-section {
     padding: 40px 0px;
+    min-width: 375px;
     align-items: center;
     justify-content: center;
   }
@@ -638,11 +640,34 @@ header .navbar-container .navbar .right-side .sidebar-icon {
   align-items: center;
   flex-direction: column;
   transition: 0.3s;
+  position: relative;
   cursor: pointer;
 }
 .artist-card:hover {
   transform: scale(0.94);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.artist-card .artist-id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #2b2b2b;
+  position: absolute;
+  border-radius: 20px;
+  z-index: 10;
+  top: 18px;
+  left: 20px;
+  font-family: "Space Mono";
+  font-size: 16px;
+  color: #858584;
+}
+@media screen and (max-width: 1050px) {
+  .artist-card .artist-id {
+    top: 12px;
+    left: 13px;
+  }
 }
 @media screen and (max-width: 1050px) {
   .artist-card {
@@ -655,6 +680,9 @@ header .navbar-container .navbar .right-side .sidebar-icon {
 }
 .artist-card .user-avatar {
   margin-bottom: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
 }
 @media screen and (max-width: 1050px) {
   .artist-card .user-avatar {
@@ -814,6 +842,7 @@ header .navbar-container .navbar .right-side .sidebar-icon {
 @media screen and (max-width: 690px) {
   .browse {
     padding: 40px 0px;
+    min-width: 375px;
   }
 }
 .browse .browse-container {
@@ -946,6 +975,11 @@ header .navbar-container .navbar .right-side .sidebar-icon {
 @media screen and (max-width: 1050px) {
   .discover-section {
     padding: 40px 195px 80px 195px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .discover-section {
+    min-width: 375px;
   }
 }
 .discover-section .discover-container {
@@ -1122,6 +1156,11 @@ header .navbar-container .navbar .right-side .sidebar-icon {
   align-items: center;
   gap: 12px;
 }
+.nft-card .middle-part .user-info img {
+  width: 24px;
+  height: 24px;
+  border-radius: 120px;
+}
 .nft-card .middle-part .user-info p {
   font-family: "Space Mono";
   font-size: 16px;
@@ -1146,6 +1185,11 @@ header .navbar-container .navbar .right-side .sidebar-icon {
 @media screen and (max-width: 1050px) {
   .nft-section {
     align-self: stretch;
+  }
+}
+@media screen and (max-width: 690px) {
+  .nft-section {
+    min-width: 375px;
   }
 }
 .nft-section .gradient-layer {
@@ -1580,6 +1624,11 @@ header .navbar-container .navbar .right-side .sidebar-icon {
     margin-top: 49px;
   }
 }
+@media screen and (max-width: 690px) {
+  .page-footer .border-line {
+    min-width: 375px;
+  }
+}
 .page-footer .footer-container {
   width: 100%;
   display: flex;
@@ -1790,4 +1839,719 @@ form .submit:hover {
   transform: scale(0.95);
   border-color: rgb(255, 158, 247);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ranking-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ranking-page .ranking-container {
+  width: 1050px;
+  padding: 80px 0px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1050px) {
+  .ranking-page .ranking-container {
+    width: 690px;
+    padding: 40px 0px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .ranking-page .ranking-container {
+    width: 315px;
+    padding: 30px 0px;
+  }
+}
+.ranking-page .ranking-container .header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ranking-page .ranking-container .header h1 {
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 110%;
+}
+@media screen and (max-width: 1050px) {
+  .ranking-page .ranking-container .header h1 {
+    font-size: 38px;
+  }
+}
+.ranking-page .ranking-container .header p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+}
+@media screen and (max-width: 1050px) {
+  .ranking-page .ranking-container .header p {
+    font-size: 16px;
+  }
+}
+.ranking-page .ranking-container .navigation-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  padding: 0px 30px;
+}
+@media screen and (max-width: 1050px) {
+  .ranking-page .ranking-container .navigation-items {
+    padding: 0px 10px;
+    gap: 10px;
+  }
+}
+.ranking-page .ranking-container .navigation-items :first-child {
+  color: white;
+}
+.ranking-page .ranking-container .navigation-items p {
+  width: 262.5px;
+  height: 60px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  color: #858584;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.ranking-page .ranking-container .navigation-items p:hover {
+  color: #A259FF;
+}
+@media screen and (max-width: 1050px) {
+  .ranking-page .ranking-container .navigation-items p {
+    font-size: 16px;
+  }
+}
+.ranking-page .ranking-container .table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ranking-page .ranking-container .table .thead {
+  display: flex;
+  width: 1050px;
+  height: 46px;
+  padding: 12px 0px;
+  align-items: center;
+  gap: 50px;
+  border-radius: 20px;
+  border: 1px solid #3b3b3b;
+}
+@media screen and (max-width: 1050px) {
+  .ranking-page .ranking-container .table .thead {
+    width: 690px;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .ranking-page .ranking-container .table .thead {
+    width: 315px;
+    gap: 10px;
+  }
+}
+.ranking-page .ranking-container .table .thead p {
+  cursor: pointer;
+}
+.ranking-page .ranking-container .table .thead p:hover {
+  color: #00AC4F;
+}
+.ranking-page .ranking-container .table .thead .artist {
+  padding: 0px 20px;
+  width: 430px;
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 1050px) {
+  .ranking-page .ranking-container .table .thead .artist {
+    width: 410px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .ranking-page .ranking-container .table .thead .artist {
+    width: 215px;
+  }
+}
+.ranking-page .ranking-container .table .thead .artist th {
+  font-family: "Space Mono";
+  font-size: 16px;
+  color: #858584;
+  font-weight: 400;
+  line-height: 140%;
+}
+.ranking-page .ranking-container .table .thead .rest {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+@media screen and (max-width: 690px) {
+  .ranking-page .ranking-container .table .thead .rest {
+    width: 100px;
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .ranking-page .ranking-container .table .thead .rest .sort-nft-sold {
+    display: none;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .ranking-page .ranking-container .table .thead .rest .sort-change, .ranking-page .ranking-container .table .thead .rest .sort-volume {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .ranking-page .ranking-container .table .thead .rest .sort-change {
+    display: none;
+  }
+}
+.ranking-page .ranking-container .table .thead .rest p {
+  width: 160px;
+  font-family: "Space Mono";
+  font-size: 16px;
+  color: #858584;
+  font-weight: 400;
+  line-height: 140%;
+}
+.ranking-page .ranking-container .table .thead .rest p:hover {
+  color: #00AC4F;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.table-body .artist-info {
+  display: flex;
+  width: 1050px;
+  height: 84px;
+  padding: 12px 20px;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-color: #3b3b3b;
+  justify-content: space-between;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.table-body .artist-info:hover {
+  transform: scale(1.01);
+  border-color: #00AC4F;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+@media screen and (max-width: 1050px) {
+  .table-body .artist-info {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .table-body .artist-info {
+    width: 315px;
+    height: 50px;
+    gap: 13px;
+  }
+}
+.table-body .artist-info .id-avatar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+@media screen and (max-width: 690px) {
+  .table-body .artist-info .id-avatar {
+    gap: 10px;
+  }
+}
+.table-body .artist-info .id-avatar .name {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+}
+@media screen and (max-width: 690px) {
+  .table-body .artist-info .id-avatar .name {
+    font-size: 16px;
+    font-weight: 400;
+    width: 131px;
+  }
+}
+.table-body .artist-info .id-avatar .avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+}
+@media screen and (max-width: 1050px) {
+  .table-body .artist-info .id-avatar .avatar img {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+  }
+}
+.table-body .artist-info .id-avatar .id {
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #2b2b2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #858584;
+}
+@media screen and (max-width: 1050px) {
+  .table-body .artist-info .id-avatar .id {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 690px) {
+  .table-body .artist-info .id-avatar .id {
+    width: 8px;
+    height: 13px;
+  }
+}
+.table-body .artist-info .status {
+  display: flex;
+  gap: 20px;
+}
+.table-body .artist-info .status .change,
+.table-body .artist-info .status .sold,
+.table-body .artist-info .status .volume {
+  width: 160px;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+@media screen and (max-width: 1050px) {
+  .table-body .artist-info .status .change,
+.table-body .artist-info .status .sold,
+.table-body .artist-info .status .volume {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .table-body .artist-info .status .change,
+.table-body .artist-info .status .sold,
+.table-body .artist-info .status .volume {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .table-body .artist-info .status .sold {
+    display: none;
+  }
+}
+@media screen and (max-width: 690px) {
+  .table-body .artist-info .status .change {
+    display: none;
+  }
+}
+.table-body .artist-info .status .change {
+  color: #00AC4F;
+}
+
+@media screen and (max-width: 690px) {
+  .cover-section {
+    min-width: 375px;
+  }
+}
+.cover-section .cover-photo {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+.cover-section .cover-photo .cover {
+  align-self: stretch;
+  background-color: transparent;
+  height: 320px;
+  width: 100%;
+  mix-blend-mode: normal;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+@media screen and (max-width: 1050px) {
+  .cover-section .cover-photo .cover {
+    height: 280px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 690px) {
+  .cover-section .cover-photo .cover {
+    height: 250px;
+    min-width: 375px;
+  }
+}
+.cover-section .cover-photo .artist-avatar-container {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  height: auto;
+  margin-top: -70px;
+  position: relative;
+  width: 1050px;
+}
+@media screen and (max-width: 1050px) {
+  .cover-section .cover-photo .artist-avatar-container {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .cover-section .cover-photo .artist-avatar-container {
+    width: 375px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.cover-section .cover-photo .artist-avatar-container .avatar-artist {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #2b2b2b;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+.cover-section .cover-photo .artist-avatar-container .avatar-artist:hover {
+  transform: scale(1.1);
+}
+.cover-section .cover-photo .artist-avatar-container .avatar-artist img {
+  background-color: transparent;
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+  mix-blend-mode: normal;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artist-info-section {
+  display: flex;
+  align-items: center;
+  padding: 40px 0px;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (max-width: 1050px) {
+  .artist-info-section {
+    padding: 30px 0px;
+  }
+}
+.artist-info-section .artist-container {
+  display: flex;
+  width: 1050px;
+  gap: 100px;
+}
+@media screen and (max-width: 1050px) {
+  .artist-info-section .artist-container {
+    width: 690px;
+    gap: 30px;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 690px) {
+  .artist-info-section .artist-container {
+    width: 315px;
+    gap: 30px;
+    flex-direction: column-reverse;
+  }
+}
+.artist-info-section .artist-container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 599px;
+}
+@media screen and (max-width: 690px) {
+  .artist-info-section .artist-container .left {
+    width: 315px;
+  }
+}
+.artist-info-section .artist-container .left .name {
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 110%;
+}
+@media screen and (max-width: 1050px) {
+  .artist-info-section .artist-container .left .name {
+    font-size: 38px;
+  }
+}
+.artist-info-section .artist-container .left .stats {
+  display: flex;
+  width: 510px;
+  gap: 20px;
+  align-items: flex-start;
+}
+@media screen and (max-width: 690px) {
+  .artist-info-section .artist-container .left .stats {
+    width: 315px;
+  }
+}
+.artist-info-section .artist-container .left .stats .volume,
+.artist-info-section .artist-container .left .stats .sold,
+.artist-info-section .artist-container .left .stats .followers {
+  width: 100%;
+}
+.artist-info-section .artist-container .left .stats .volume h5,
+.artist-info-section .artist-container .left .stats .sold h5,
+.artist-info-section .artist-container .left .stats .followers h5 {
+  font-family: "Space Mono";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+}
+@media screen and (max-width: 1050px) {
+  .artist-info-section .artist-container .left .stats .volume h5,
+.artist-info-section .artist-container .left .stats .sold h5,
+.artist-info-section .artist-container .left .stats .followers h5 {
+    font-size: 22px;
+  }
+}
+.artist-info-section .artist-container .left .stats .volume p,
+.artist-info-section .artist-container .left .stats .sold p,
+.artist-info-section .artist-container .left .stats .followers p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+}
+@media screen and (max-width: 1050px) {
+  .artist-info-section .artist-container .left .stats .volume p,
+.artist-info-section .artist-container .left .stats .sold p,
+.artist-info-section .artist-container .left .stats .followers p {
+    font-size: 16px;
+  }
+}
+.artist-info-section .artist-container .left .bio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.artist-info-section .artist-container .left .bio .bio-head {
+  color: #858584;
+  font-family: "Space Mono";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 160%;
+}
+@media screen and (max-width: 1050px) {
+  .artist-info-section .artist-container .left .bio .bio-head {
+    font-size: 16px;
+  }
+}
+.artist-info-section .artist-container .left .bio .artist-bio {
+  font-family: "Work Sans";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+}
+@media screen and (max-width: 1050px) {
+  .artist-info-section .artist-container .left .bio .artist-bio {
+    font-size: 16px;
+  }
+}
+.artist-info-section .artist-container .left .link p {
+  color: #858584;
+  font-family: "Space Mono";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 160%;
+}
+@media screen and (max-width: 1050px) {
+  .artist-info-section .artist-container .left .link p {
+    font-size: 16px;
+  }
+}
+.artist-info-section .artist-container .left .link .links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.artist-info-section .artist-container .right .copy-follow {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 690px) {
+  .artist-info-section .artist-container .right .copy-follow {
+    flex-direction: column;
+  }
+}
+.artist-info-section .artist-container .right .copy-follow .chain-id {
+  width: 186px;
+  height: 60px;
+  padding: 0px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #a259ff;
+  cursor: pointer;
+  gap: 10px;
+  transition: 0.3s;
+}
+.artist-info-section .artist-container .right .copy-follow .chain-id:hover {
+  transform: scale(0.95);
+}
+@media screen and (max-width: 690px) {
+  .artist-info-section .artist-container .right .copy-follow .chain-id {
+    width: 100%;
+  }
+}
+.artist-info-section .artist-container .right .copy-follow .follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0px 30px;
+  gap: 12px;
+  border: 2px solid #a259ff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.artist-info-section .artist-container .right .copy-follow .follow:hover {
+  transform: scale(0.95);
+}
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 690px) {
+  .collection {
+    min-width: 375px;
+  }
+}
+.collection .border-line {
+  width: 100%;
+  height: 1px;
+  background-color: #3b3b3b;
+}
+.collection .collection-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1050px;
+}
+@media screen and (max-width: 1050px) {
+  .collection .collection-container {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .collection .collection-container {
+    width: 315px;
+  }
+}
+.collection .collection-container .created,
+.collection .collection-container .owned,
+.collection .collection-container .artist-collection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0px 30px;
+  gap: 16px;
+  flex: 1 0 0;
+  cursor: pointer;
+}
+.collection .collection-container .created:hover p,
+.collection .collection-container .owned:hover p,
+.collection .collection-container .artist-collection:hover p {
+  color: rgba(255, 255, 0, 0.42);
+}
+@media screen and (max-width: 690px) {
+  .collection .collection-container .created,
+.collection .collection-container .owned,
+.collection .collection-container .artist-collection {
+    padding: 0px 10px;
+  }
+}
+.collection .collection-container .created .quantity,
+.collection .collection-container .owned .quantity,
+.collection .collection-container .artist-collection .quantity {
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #858584;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+@media screen and (max-width: 690px) {
+  .collection .collection-container .created .quantity,
+.collection .collection-container .owned .quantity,
+.collection .collection-container .artist-collection .quantity {
+    display: none;
+  }
+}
+.collection .collection-container .created p,
+.collection .collection-container .owned p,
+.collection .collection-container .artist-collection p {
+  color: #858584;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  transition: 0.3s;
+}
+@media screen and (max-width: 690px) {
+  .collection .collection-container .created p,
+.collection .collection-container .owned p,
+.collection .collection-container .artist-collection p {
+    font-size: 16px;
+  }
+}
+.collection .collection-container .created {
+  border-bottom: 3px solid #858584;
+}
+.collection .collection-container .created p {
+  color: white;
+}
+
+.nft-cards-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0px;
+  gap: 30px;
+  align-self: stretch;
+}
+@media screen and (max-width: 690px) {
+  .nft-cards-section {
+    min-width: 375px;
+  }
+}
+.nft-cards-section .nft-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+@media screen and (max-width: 1050px) {
+  .nft-cards-section .nft-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 690px) {
+  .nft-cards-section .nft-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

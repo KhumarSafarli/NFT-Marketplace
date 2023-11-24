@@ -6,7 +6,7 @@ const creators = [
       value: "99.99",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-1.png",
+    profileImgPath: "../../backend/images/avatars/avatar-1.png",
     volume: "500000",
     nftSold: 100,
     followers: 5000,
@@ -20,7 +20,7 @@ const creators = [
       value: "75.25",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-2.png",
+    profileImgPath: "../../backend/images/avatars/avatar-2.png",
     volume: "75000",
     nftSold: 25,
     followers: 2000,
@@ -34,7 +34,7 @@ const creators = [
       value: "123.45",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-3.png",
+    profileImgPath: "../../backend/images/avatars/avatar-3.png",
     volume: "150000",
     nftSold: 50,
     followers: 3000,
@@ -48,7 +48,7 @@ const creators = [
       value: "55.55",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-4.png",
+    profileImgPath: "../../backend/images/avatars/avatar-4.png",
     volume: "85000",
     nftSold: 40,
     followers: 2500,
@@ -62,7 +62,7 @@ const creators = [
       value: "67.89",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-5.png",
+    profileImgPath: "../../backend/images/avatars/avatar-5.png",
     volume: "90000",
     nftSold: 35,
     followers: 2300,
@@ -76,7 +76,7 @@ const creators = [
       value: "123.67",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-6.png",
+    profileImgPath: "../../backend/images/avatars/avatar-6.png",
     volume: "120000",
     nftSold: 60,
     followers: 5500,
@@ -90,7 +90,7 @@ const creators = [
       value: "78.33",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-7.png",
+    profileImgPath: "../../backend/images/avatars/avatar-7.png",
     volume: "80000",
     nftSold: 45,
     followers: 2800,
@@ -104,7 +104,7 @@ const creators = [
       value: "88.99",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-8.png",
+    profileImgPath: "../../backend/images/avatars/avatar-8.png",
     volume: "95000",
     nftSold: 55,
     followers: 3800,
@@ -118,7 +118,7 @@ const creators = [
       value: "45.12",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-9.png",
+    profileImgPath: "../../backend/images/avatars/avatar-9.png",
     volume: "70000",
     nftSold: 30,
     followers: 1800,
@@ -128,7 +128,7 @@ const creators = [
   {
     id: "10",
     name: "Animakid",
-    profileImgPath: "images/avatars/avatar-10.png",
+    profileImgPath: "../../backend/images/avatars/avatar-10.png",
     totalSale: {
       value: "23.58",
       currency: "ETH",
@@ -146,7 +146,7 @@ const creators = [
       value: "33.44",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-11.png",
+    profileImgPath: "../../backend/images/avatars/avatar-11.png",
     volume: "60000",
     nftSold: 70,
     followers: 4200,
@@ -160,7 +160,7 @@ const creators = [
       value: "47.79",
       currency: "ETH",
     },
-    profileImgPath: "images/avatars/avatar-12.png",
+    profileImgPath: "../../backend/images/avatars/avatar-12.png",
     volume: "72000",
     nftSold: 80,
     followers: 5500,
@@ -182,7 +182,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Distant Galaxy",
-    imgPath: "images/nfts/nft-1.png",
+    imgPath: "../../backend/images/nfts/nft-1.png",
   },
   {
     id: 2,
@@ -196,7 +196,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Life On Edena",
-    imgPath: "images/nfts/nft-2.png",
+    imgPath: "../../backend/images/nfts/nft-2.png",
   },
   {
     id: 3,
@@ -210,7 +210,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "AstroFiction",
-    imgPath: "images/nfts/nft-3.png",
+    imgPath: "../../backend/images/nfts/nft-3.png",
   },
   {
     id: 4,
@@ -224,7 +224,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "CryptoCity",
-    imgPath: "images/nfts/nft-4.png",
+    imgPath: "../../backend/images/nfts/nft-4.png",
   },
   {
     id: 5,
@@ -238,7 +238,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "ColorfulDog 0524",
-    imgPath: "images/nfts/nft-5.png",
+    imgPath: "../../backend/images/nfts/nft-5.png",
   },
   {
     id: 6,
@@ -252,7 +252,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Space Tales",
-    imgPath: "images/nfts/nft-6.png",
+    imgPath: "../../backend/images/nfts/nft-6.png",
   },
   {
     id: 7,
@@ -266,7 +266,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Cherry Blossom Girl 037",
-    imgPath: "images/nfts/nft-7.png",
+    imgPath: "../../backend/images/nfts/nft-7.png",
   },
   {
     id: 8,
@@ -280,7 +280,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Dancing Robots 0987",
-    imgPath: "images/nfts/nft-8.png",
+    imgPath: "../../backend/images/nfts/nft-8.png",
   },
   {
     id: 9,
@@ -294,7 +294,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "IceCream Ape ",
-    imgPath: "images/nfts/nft-9.png",
+    imgPath: "../../backend/images/nfts/nft-9.png",
   },
   {
     id: 10,
@@ -308,7 +308,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Foxy Life",
-    imgPath: "images/nfts/nft-10.png",
+    imgPath: "../../backend/images/nfts/nft-10.png",
   },
   {
     id: 11,
@@ -322,7 +322,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Cat from future",
-    imgPath: "images/nfts/nft-11.png",
+    imgPath: "../../backend/images/nfts/nft-11.png",
   },
   {
     id: 12,
@@ -336,7 +336,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Psycho Dog",
-    imgPath: "images/nfts/nft-12.png",
+    imgPath: "../../backend/images/nfts/nft-12.png",
   },
   {
     id: 13,
@@ -350,7 +350,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Designer Bear",
-    imgPath: "images/nfts/nft-13.png",
+    imgPath: "../../backend/images/nfts/nft-13.png",
   },
   {
     id: 14,
@@ -364,7 +364,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Dancing Robot 0375",
-    imgPath: "images/nfts/nft-14.png",
+    imgPath: "../../backend/images/nfts/nft-14.png",
   },
   {
     id: 15,
@@ -378,7 +378,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Dancing Robot 0356",
-    imgPath: "images/nfts/nft-15.png",
+    imgPath: "../../backend/images/nfts/nft-15.png",
   },
   {
     id: 16,
@@ -392,7 +392,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Dancing Robot 0321",
-    imgPath: "images/nfts/nft-16.png",
+    imgPath: "../../backend/images/nfts/nft-16.png",
   },
   {
     id: 17,
@@ -406,7 +406,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Dancing Robot 0512",
-    imgPath: "images/nfts/nft-17.png",
+    imgPath: "../../backend/images/nfts/nft-17.png",
   },
   {
     id: 18,
@@ -420,7 +420,7 @@ const nfts = [
       currency: "wETH",
     },
     name: "Dancing Robot 0024",
-    imgPath: "images/nfts/nft-18.png",
+    imgPath: "../../backend/images/nfts/nft-18.png",
   },
 ];
 
@@ -451,8 +451,8 @@ const users = [
   },
 ];
 
-// module.exports = {
-//   creators,
-//   nfts,
-//   users,
-// };
+module.exports = {
+  creators,
+  nfts,
+  users,
+};

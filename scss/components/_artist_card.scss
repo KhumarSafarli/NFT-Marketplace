@@ -7,38 +7,63 @@
   @include center-items;
   flex-direction: column;
   transition: 0.3s;
+  position: relative;
   cursor: pointer;
-  &:hover{
+
+ 
+  &:hover {
     transform: scale(0.94);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
-  @include for-size(tablet){
+  .artist-id {
+    @include center-items;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #2b2b2b;
+    position: absolute;
+    border-radius: 20px;
+    z-index: 10;
+    top: 18px;
+    left: 20px;
+    font-family: "Space Mono";
+    font-size: 16px;
+    color:#858584;
+    @include for-size(tablet){
+      top:12px;
+      left: 13px;
+      
+    }
+  }
+  @include for-size(tablet) {
     width: 315px;
     height: 100px;
     display: flex;
     flex-direction: row;
-    gap:20px;
-    
+    gap: 20px;
   }
   .user-avatar {
     margin-bottom: 20px;
-   
-    @include for-size(tablet){
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+
+    @include for-size(tablet) {
       margin: 0px;
       width: 60px;
       height: 60px;
     }
   }
-  .art-info{
+  .art-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include for-size(tablet){
+    @include for-size(tablet) {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
-    
   }
   h5 {
     font-size: 22px;
@@ -50,7 +75,7 @@
   .top-sales {
     @include center-items;
     gap: 10px;
-    @include for-size(tablet){
+    @include for-size(tablet) {
       flex-direction: column;
     }
 

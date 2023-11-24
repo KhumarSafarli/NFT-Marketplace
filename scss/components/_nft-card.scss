@@ -73,6 +73,12 @@
     .user-info {
       @include center-items;
       gap: 12px;
+
+      img{
+        width: 24px;
+        height: 24px;
+        border-radius: 120px;
+      }
       p {
         font-family: "Space Mono";
         font-size: 16px;

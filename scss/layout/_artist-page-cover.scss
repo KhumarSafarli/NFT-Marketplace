@@ -54,6 +54,7 @@
         cursor: pointer;
         position: relative;
         transition: 0.3s;
+        
         &:hover {
           transform: scale(1.1);
         }
@@ -61,8 +62,10 @@
         img {
           background-color: transparent;
           height: 120px;
-          min-width: 120px;
+          width: 120px;
+          border-radius: 20px;
           mix-blend-mode: normal;
+          object-fit: cover;
           position: relative;
           @include center-all-elements;
         }
