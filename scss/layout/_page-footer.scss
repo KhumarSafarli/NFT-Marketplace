@@ -51,7 +51,7 @@
       }
       .subscription {
         display: flex;
-        width: 420px;
+        width: 100%;
 
         @include for-size(mobile){
             flex-direction: column;

@@ -8,6 +8,7 @@
   @include for-size(mobile){
     flex-direction: column;
     padding: 40px 0px;
+    min-width: 375px;
   }
 
   .widget-container {

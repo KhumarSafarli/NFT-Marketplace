@@ -374,6 +374,7 @@ header .navbar-container .navbar .right-side .sidebar-icon {
 }
 @media screen and (max-width: 690px) {
   .trending {
+    min-width: 375px;
     justify-content: center;
   }
 }
@@ -488,6 +489,11 @@ header .navbar-container .navbar .right-side .sidebar-icon {
 @media screen and (max-width: 1050px) {
   .toprated {
     padding: 40px 0px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .toprated {
+    min-width: 375px;
   }
 }
 .toprated .view-bottom {
@@ -740,6 +746,11 @@ header .navbar-container .navbar .right-side .sidebar-icon {
 @media screen and (max-width: 1050px) {
   .toprated {
     padding: 40px 0px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .toprated {
+    min-width: 375px;
   }
 }
 .toprated .view-bottom {
@@ -1471,6 +1482,7 @@ header .navbar-container .navbar .right-side .sidebar-icon {
   .subscribe-widget {
     flex-direction: column;
     padding: 40px 0px;
+    min-width: 375px;
   }
 }
 .subscribe-widget .widget-container {
@@ -1665,7 +1677,7 @@ header .navbar-container .navbar .right-side .sidebar-icon {
 }
 .page-footer .footer-container .nft-marketplace .subscription {
   display: flex;
-  width: 420px;
+  width: 100%;
 }
 @media screen and (max-width: 690px) {
   .page-footer .footer-container .nft-marketplace .subscription {
@@ -2553,5 +2565,83 @@ form .submit:hover {
 @media screen and (max-width: 690px) {
   .nft-cards-section .nft-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.subhead {
+  display: flex;
+  padding: 80px 0px;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+@media screen and (max-width: 1050px) {
+  .subhead {
+    padding: 60px 0px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .subhead {
+    padding: 40px 0px;
+    min-width: 375px;
+  }
+}
+.subhead .subhead-container {
+  width: 1050px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (max-width: 1050px) {
+  .subhead .subhead-container {
+    width: 680px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .subhead .subhead-container {
+    width: 315px;
+  }
+}
+.subhead .subhead-container .headline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.searchbar {
+  display: flex;
+  width: 1050px;
+  height: 60px;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #3B3B3B;
+}
+@media screen and (max-width: 1050px) {
+  .searchbar {
+    width: 680px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .searchbar {
+    width: 315px;
+  }
+}
+.searchbar .searchInput {
+  width: 960px;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+}
+@media screen and (max-width: 1050px) {
+  .searchbar .searchInput {
+    width: 590px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .searchbar .searchInput {
+    width: 230px;
   }
 }

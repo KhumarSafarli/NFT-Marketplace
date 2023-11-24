@@ -6,6 +6,7 @@
     padding: 40px 0px;
   }
   @include for-size(mobile){
+    min-width: 375px;
     justify-content: center;
     
   }

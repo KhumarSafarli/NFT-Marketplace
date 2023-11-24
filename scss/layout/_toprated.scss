@@ -6,6 +6,9 @@
   @include for-size(tablet){
     padding: 40px 0px;
   }
+  @include for-size(mobile){
+    min-width: 375px;
+  }
 
   .view-bottom{
     visibility: hidden;
