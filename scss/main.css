@@ -2573,7 +2573,6 @@ form .submit:hover {
   padding: 80px 0px;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 @media screen and (max-width: 1050px) {
   .subhead {

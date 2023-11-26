@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".submit-form");
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -104,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
       position: "right",
       stopOnFocus: true,
       style: {
-        background: "linear-gradient(to right, #2ecc71, #27ae60)", // Green gradient
+        background: "linear-gradient(to right, #2ecc71, #27ae60)", 
       },
     }).showToast();
   }
-});
+
