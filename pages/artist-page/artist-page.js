@@ -7,6 +7,17 @@ const id = searchParams.get("id");
 if (!id) {
     window.open("../../home.html");
 }
+
+function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = 0;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
 async function getCreatorFromApi(id) {
     try {
         const response = await fetch(`${BASE_URL}/creators/${id}`);
@@ -20,7 +31,11 @@ async function getCreatorFromApi(id) {
         document.querySelector(".sold h5").textContent = kFormatter(creator.nftSold) +"+";;
         document.querySelector(".followers h5").textContent = creator.followers +"+";
         document.querySelector(".artist-bio").textContent = creator.bio;
-        document.querySelector(".id").textContent = creator.chainId;
+        const chainIdElement = document.querySelector('.id');
+        chainIdElement.addEventListener('click', () => {
+          copyToClipboard(creator.chainId);
+          showSuccessToast('ID copied to clipboard!');
+        });
         
         const nftContainer = document.querySelector(".nft-container");
         const nftCreatorData = creator.nfts; 
@@ -84,4 +99,17 @@ async function getCreatorFromApi(id) {
 }
 
 getCreatorFromApi(id);
+function showSuccessToast(message) {
+    Toastify({
+      text: message,
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "linear-gradient(to right, #2ecc71, #27ae60)", 
+      },
+    }).showToast();
+  }
 
