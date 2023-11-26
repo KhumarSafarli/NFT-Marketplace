@@ -1,23 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-  fetch(`${BASE_URL}/creators`)
-    .then((response) => response.json())
-    .then((data) => {
-      fillArtistCards(data);
-    })
-    .catch((error) => {
+  async function getCreatorsFromApi() {
+    try {
+      const response = await fetch(`${BASE_URL}/creators`, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+      });
+  
+      if (!response.ok) {
+        console.log(`${response.status}`);
+      }
+  
+      const data = await response.json();
+      return data;
+    } catch (error) {
       console.log(error);
-    });
-
+    }
+  }
+  
   function fillArtistCards(creators) {
     const artistsGrid = document.querySelector(".artists-grid");
     creators.forEach((creator) => {
       const artistCard = document.createElement("div");
       artistCard.classList.add("artist-card");
-
+  
       artistCard.addEventListener("click", () => {
         window.location.href = `./pages/artist-page/artist-page.html?id=${creator.id}`;
       });
-
+  
       const artistId = document.createElement("div");
       artistId.classList.add("artist-id");
       artistId.textContent = creator.id;
@@ -37,23 +48,32 @@ document.addEventListener("DOMContentLoaded", function () {
       const sales = document.createElement("p");
       sales.classList.add("sales");
       sales.textContent = `${creator.totalSale.value} ${creator.totalSale.currency}`;
-
       topSales.appendChild(totalSales);
       topSales.appendChild(sales);
-
       artInfo.appendChild(nickname);
       artInfo.appendChild(topSales);
-
       artistCard.appendChild(artistId);
       artistCard.appendChild(avatarImg);
       artistCard.appendChild(artInfo);
       artistsGrid.appendChild(artistCard);
-      
-
     });
   }
- 
-});
+  
+  async function fillCreatorsTable() {
+    try {
+      const data = await getCreatorsFromApi();
+      const creators = data;
+  
+      creators.forEach(creator => {
+        console.log(creator);
+        fillArtistCards(creators);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  fillCreatorsTable();
+  
 const subscribeWidget = document.querySelector(".subscribe-widget");
 const subscribeButtonWidget = subscribeWidget.querySelector(".submit");
 subscribeButtonWidget.addEventListener("click", handleSubscribe);
