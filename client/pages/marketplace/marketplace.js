@@ -3,6 +3,7 @@ const searchForm = document.querySelector(".search");
 const searchInput = document.getElementById("searchInput");
 const showMoreBtn = document.querySelector(".skip-btn");
 let skip = 0;
+searchStr = "";
 showMoreBtn.addEventListener("click", async () => {
   const data = await getNftsFromApi(marketplaceNftCard.children.length);
   if (!data.hasMore) {
@@ -14,11 +15,13 @@ showMoreBtn.addEventListener("click", async () => {
 searchForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const searchStr = searchInput.value;
+  marketplaceNftCard.innerHTML = "";
   const data = await getNftsFromApi(skip, searchStr);
+
   createAppendNftCards(data.nfts);
 });
 
-async function getNftsFromApi(skip, searchStr = "") {
+async function getNftsFromApi(skip, searchStr) {
   const response = await fetch(`${BASE_URL}/nfts`, {
     method: "POST",
     headers: {
@@ -43,7 +46,7 @@ async function fillNftCardWithNft() {
 
 function createAppendNftCards(nfts) {
   const nftContainer = document.querySelector(".nft-container");
-  nftContainer.innerHTML = "";
+
   nfts.forEach((nft) => {
     const nftCard = document.createElement("div");
     nftCard.classList.add("nft-card");
