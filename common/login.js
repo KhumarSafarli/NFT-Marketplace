@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('.submit-form');
-  form.addEventListener('submit', function (event) {
+  form.addEventListener('submit',async function (event) {
     event.preventDefault();
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     loginAccount(username, password);
-    setTimeout(() => {
-      showSuccessToast('You successfully logged in!');
-    }, 1000);
+   
   });
 
   function isPasswordValid(password) {
@@ -44,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (response.status === 200) {
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       setTimeout(() => {
         showSuccessToast('You successfully logged in!');
       }, 1000);
-    } else if (response.status === 401) {
+    } else if (response.status === 400) {
       showToast('Invalid username or password. Please try again.');
     } else {
       
@@ -56,31 +54,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function showToast(message) {
-    Toastify({
-      text: message,
-      duration: 3000,
-      close: true,
-      gravity: 'top',
-      position: 'right',
-      stopOnFocus: true,
-      style: {
-        background: 'linear-gradient(to right, #e74c3c, #e74c3c)',
-      },
-    }).showToast();
-  }
-
-  function showSuccessToast(message) {
-    Toastify({
-      text: message,
-      duration: 3000,
-      close: true,
-      gravity: 'top',
-      position: 'right',
-      stopOnFocus: true,
-      style: {
-        background: 'linear-gradient(to right, #2ecc71, #27ae60)',
-      },
-    }).showToast();
-  }
 });
+function showToast(message) {
+  Toastify({
+    text: message,
+    duration: 3000,
+    close: true,
+    gravity: 'top',
+    position: 'right',
+    stopOnFocus: true,
+    style: {
+      background: 'linear-gradient(to right, #e74c3c, #e74c3c)',
+    },
+  }).showToast();
+}
+
+function showSuccessToast(message) {
+  Toastify({
+    text: message,
+    duration: 3000,
+    close: true,
+    gravity: 'top',
+    position: 'right',
+    stopOnFocus: true,
+    style: {
+      background: 'linear-gradient(to right, #2ecc71, #27ae60)',
+    },
+  }).showToast();
+}

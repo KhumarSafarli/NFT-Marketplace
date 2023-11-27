@@ -1,4 +1,18 @@
 const marketplaceNftCard = document.querySelector(".nft-container .nft-card");
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", (e) => {
+  const nftCards = document.querySelectorAll(".nft-container .nft-card");
+  Array.from(nftCards).forEach((nftCard) => {
+    const title = nftCard.querySelector(".info-part .middle-part h4").textContent;
+
+    if (title.toLowerCase().trim().includes(e.target.value.toLowerCase().trim())) {
+      nftCard.style.display = "initial";
+    } else {
+      nftCard.style.display = "none";
+    }
+  });
+});
 
 async function getNftsFromApi() {
   const response = await fetch(`${BASE_URL}/nfts`, {
@@ -78,3 +92,4 @@ async function fillNftCardWithNft() {
   });
 }
 fillNftCardWithNft();
+

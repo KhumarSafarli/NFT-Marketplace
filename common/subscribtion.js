@@ -1,9 +1,7 @@
-const pageFooter = document.querySelector(".page-footer");
-const subscribeButtonFooter = pageFooter.querySelector(".submit");
+const subscribeButtonFooter = document.querySelector(".page-footer .submit");
 subscribeButtonFooter.addEventListener("click", handleSubscribe);
 
 function handleSubscribe(event) {
-  event.preventDefault();
   const emailInput = event.target.parentElement.parentElement.querySelector(".email");
   const email = emailInput.value.trim();
   if (isValidEmail(email)) {

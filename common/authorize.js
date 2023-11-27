@@ -53,17 +53,17 @@
 
       if (response.status === 200) {
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         setTimeout(() => {
           showSuccessToast("You successfully created an account!");
         }, 1000);
     
-      } else if (response.status === 409) {
+      } else if (response.status === 400) {
         
         showToast("Username is already used");
       } else {
         showToast("Username or Email already used");
-        console.log( await response.json());
+        // console.log( await response.json());
       }
     }
     registerAccount();
