@@ -1,0 +1,70 @@
+.signup-page {
+  .signup-container {
+    @include center-items;
+    gap: 60px;
+    @include for-size(tablet){
+        gap:40px;
+    }
+    @include for-size(mobile){
+        flex-direction: column;
+    }
+    
+.left{
+    background-image: url(../assets/images/createaccountimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    height: 615px;
+    min-width: 397px;
+    flex: 1;
+    align-self: stretch;
+    mix-blend-mode: normal;
+    object-fit: cover;
+    position: relative;
+   @include for-size(mobile){
+    flex:none;
+   }
+}
+    .right {
+        
+        display: flex;
+        flex-direction: column;
+      flex: 1;
+        gap:40px;
+
+        .toast.notification {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background-color: #333;
+          color: #fff;
+          padding: 15px;
+          border-radius: 5px;
+          display: none;
+          transition: opacity 0.5s ease-in-out;
+  
+          &.show {
+            display: block;
+          }
+        }
+        @include for-size(tablet){
+            width: 397px;
+        }
+        @include for-size(mobile){
+           width: 315px;
+           align-items: center;
+           padding: 30px 0px 40px 0px;
+           }
+      .header {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        h1 {
+          font-size: 51px;
+          font-weight: 600;
+          line-height: 110%;
+        }
+      }
+    }
+  }
+}

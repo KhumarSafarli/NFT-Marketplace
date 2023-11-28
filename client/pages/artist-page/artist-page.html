@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../scss/main.css" />
+    <script defer src="../../common/constants.js"></script>
+    <script defer src="../../common/subscribtion.js"></script>
+    <script defer src="../artist-page/artist-page.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <title>Artist Page</title>
+  </head>
+  <header>
+    <div class="navbar-container">
+      <div class="navbar">
+        <div class="left-side">
+          <img src="../../assets/icons/logo.svg" />
+          <a href="../../home.html">NFT Marketplace</a>
+        </div>
+        <div class="right-side">
+          <a href="../../pages/marketplace/marketplace.html">Marketplace</a>
+          <a href="../ranking/ranking.html">Rankings</a>
+          <a href="../login.html" class="login">Login</a>
+          <a href="../signup.html" class="signup"
+            ><img src="../../assets/icons/user.svg" /> Sign Up</a
+          >
+          <img src="../../assets/icons/burger.svg" class="sidebar-icon" />
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="cover-section">
+      <div class="cover-photo">
+        <img src="../../assets/images/cover-photo.png" class="cover" />
+        <div class="artist-avatar-container">
+          <div class="avatar-artist">
+            <img src="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="artist-info-section">
+      <div class="artist-container">
+        <div class="left">
+          <h1 class="name">Animakid</h1>
+
+          <div class="stats">
+            <div class="volume">
+              <h5></h5>
+              <p>Volume</p>
+            </div>
+            <div class="sold">
+              <h5></h5>
+              <p>NFTs sold</p>
+            </div>
+            <div class="followers">
+              <h5>3000k+</h5>
+              <p>Followers</p>
+            </div>
+          </div>
+          <div class="bio">
+            <p class="bio-head">Bio</p>
+            <p class="artist-bio">The internet's friendliest designer kid.</p>
+          </div>
+          <div class="link">
+            <p>Link</p>
+            <div class="links">
+              <img src="../../assets/icons/globe.svg" />
+              <img src="../../assets/icons/discord.svg" />
+              <img src="../../assets/icons/youtube.svg" />
+              <img src="../../assets/icons/twitter.svg" />
+              <img src="../../assets/icons/instagram.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="copy-follow">
+            <div class="chain-id">
+              <img src="../../assets/icons/copy.svg" />
+              <p class="id">0xc0E3...B79C</p>
+            </div>
+            <div class="follow">
+              <img src="../../assets/icons/plus.svg" />
+              <p>Follow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collection">
+      <div class="border-line"></div>
+      <div class="collection-container">
+        <div class="created">
+          <p>Created</p>
+          <div class="quantity">302</div>
+        </div>
+        <div class="owned">
+          <p>Owned</p>
+          <div class="quantity">67</div>
+        </div>
+        <div class="artist-collection">
+          <p>Collection</p>
+          <div class="quantity">4</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nft-cards-section">
+      <div class="nft-container">
+        <!-- <div class="nft-card">
+              <img src="../../assets/images/distantgalaxy.png" class="head" />
+              <div class="info-part">
+                <div class="middle-part">
+                  <h4>Distant Galaxy</h4>
+                  <div class="user-info">
+                    <img src="../../assets/images/avatar1.png" class="avatar" />
+                    <p class="username">MoonDancer</p>
+                  </div>
+                </div>
+                <div class="footer-info">
+                  <div class="left">
+                    <p class="price">Price</p>
+                    <p class="cost">1.63 ETH</p>
+                  </div>
+                  <div class="right">
+                    <p class="price">Highest Bid</p>
+                    <p class="cost">0.33 ETH</p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+      </div>
+    </div>
+    <div class="page-footer">
+      <div class="footer-container">
+        <div class="nft-marketplace">
+          <div class="header" id="nft">
+            <img src="../../assets/icons/marketplace.svg" />
+            <h4>NFT Marketplace</h4>
+          </div>
+          <div class="nav-panel">
+            <p>NFT marketplace UI created with Anima for Figma.</p>
+            <p>Join our community</p>
+          </div>
+          <div class="social-media">
+            <img src="../../assets/icons/discord.svg" />
+            <img src="../../assets/icons/youtube.svg" />
+            <img src="../../assets/icons/twitter.svg" />
+            <img src="../../assets/icons/instagram.svg" />
+          </div>
+        </div>
+        <div class="nft-marketplace">
+          <div class="header">
+            <h4>Explore</h4>
+          </div>
+          <div class="nav-panel">
+            <p>Marketplace</p>
+            <p>Rankings</p>
+            <p>Connect a wallet</p>
+            <p></p>
+          </div>
+        </div>
+        <div class="nft-marketplace">
+          <div class="header">
+            <h4>Join our weekly digest</h4>
+          </div>
+          <div class="nav-panel">
+            <p>
+              Get exclusive promotions & updates <br />straight to your inbox.
+            </p>
+          </div>
+          <div class="subscription">
+            <div class="subscribe">
+              <input
+                type="text"
+                placeholder="Enter your email"
+                required
+                class="email"
+              />
+            </div>
+            <div class="submit-btn">
+              <img src="../../assets/icons/email.svg" /><input
+                type="submit"
+                value="Subscribe"
+                class="submit"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-line"></div>
+    </div>
+  </body>
+</html>

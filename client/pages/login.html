@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../scss/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script defer src="../common/constants.js"></script>
+    <script defer src="./../common/subscribtion.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <!-- <script defer src="../common/authorize.js"></script> -->
+    <script defer src="../common/login.js"></script>
+    <title>Log In</title>
+  </head>
+  <header>
+    <div class="navbar-container">
+      <div class="navbar">
+        <div class="left-side">
+          <img src="../assets/icons/logo.svg" />
+          <a href="../home.html">NFT Marketplace</a>
+        </div>
+        <div class="right-side">
+          <a href="../pages/marketplace/marketplace.html">Marketplace</a>
+          <a href="./ranking/ranking.html">Rankings</a>
+          <a href="./login.html" class="login">Login</a>
+          <a href="./signup.html" class="signup"
+            ><img src="../assets/icons/user.svg" /> Sign Up</a
+          >
+          <img src="../assets/icons/burger.svg" class="sidebar-icon" />
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="signup-page">
+      <div class="signup-container">
+        <div class="left"></div>
+        <div class="right">
+          <div class="header">
+            <h1>Log In</h1>
+            <p>
+              Welcome! Log in and start creating, collecting and selling NFTs.
+            </p>
+          </div>
+          <form class="submit-form">
+            <div class="name">
+              <img src="../assets/icons/username.svg" />
+              <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                class="username"
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="password">
+              <img src="../assets/icons/password.svg" />
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                class="password-input"
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <button type="submit" class="submit">Log In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div class="footer-container">
+        <div class="nft-marketplace">
+          <div class="header" id="nft">
+            <img src="../assets/icons/marketplace.svg" />
+            <h4>NFT Marketplace</h4>
+          </div>
+          <div class="nav-panel">
+            <p>NFT marketplace UI created with Anima for Figma.</p>
+            <p>Join our community</p>
+          </div>
+          <div class="social-media">
+            <img src="../assets/icons/discord.svg" />
+            <img src="../assets/icons/youtube.svg" />
+            <img src="../assets/icons/twitter.svg" />
+            <img src="../assets/icons/instagram.svg" />
+          </div>
+        </div>
+        <div class="nft-marketplace">
+          <div class="header">
+            <h4>Explore</h4>
+          </div>
+          <div class="nav-panel">
+            <p>Marketplace</p>
+            <p>Rankings</p>
+            <p>Connect a wallet</p>
+            <p></p>
+          </div>
+        </div>
+        <div class="nft-marketplace">
+          <div class="header">
+            <h4>Join our weekly digest</h4>
+          </div>
+          <div class="nav-panel">
+            <p>
+              Get exclusive promotions & updates <br />straight to your inbox.
+            </p>
+          </div>
+          <div class="subscription">
+            <div class="subscribe">
+              <input
+                type="text"
+                placeholder="Enter your email"
+                required
+                class="email"
+              />
+            </div>
+            <div class="submit-btn">
+              <img src="../assets/icons/email.svg" /><input
+                type="submit"
+                value="Subscribe"
+                class="submit"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-line"></div>
+    </div>
+  </body>
+</html>
