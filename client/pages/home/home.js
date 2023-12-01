@@ -28,7 +28,27 @@ async function fillCreatorsTable() {
     creators.forEach((creator) => {
       const artistCard = document.createElement("div");
       artistCard.classList.add("artist-card");
+      const heartIcon = document.createElement("i");
+      heartIcon.innerHTML = `
+        <i class="fa fa-heart"></i>
+      `;
+      artistCard.appendChild(heartIcon);
+      let isHeartIconClicked = false;
+      heartIcon.addEventListener("click", (event) => {
+        event.stopPropagation();
+        heartIcon.classList.toggle("heart-icon-clicked");
+        isHeartIconClicked = !isHeartIconClicked;
 
+        if (isHeartIconClicked) {
+          showSuccessToast("NFT Creator added to favorites");
+          addToFavorites(creator);
+        } else {
+          showToast("NFT Creator removed from favorites");
+          removeFromFavorites(creator.id);
+        }
+
+        console.log(isHeartIconClicked);
+      });
       artistCard.addEventListener("click", () => {
         window.location.href = `./pages/artist-page/artist-page.html?id=${creator.id}`;
       });
@@ -67,6 +87,29 @@ async function fillCreatorsTable() {
 }
 
 fillCreatorsTable();
+function addToFavorites(creator) {
+  const favorites = getFavoritesFromLocalStorage();
+  if (!isNftInFavorites(creator)) {
+    favorites.push(creator);
+    saveFavoritesToLocalStorage(favorites);
+  }
+}
+function isNftInFavorites(nft) {
+  const favorites = getFavoritesFromLocalStorage();
+  return favorites.some((fav) => fav.id === nft.id);
+}
+function removeFromFavorites(creatorId) {
+  let favorites = getFavoritesFromLocalStorage();
+  favorites = favorites.filter((fav) => fav.id !== creatorId);
+  saveFavoritesToLocalStorage(favorites);
+}
+function getFavoritesFromLocalStorage() {
+  return JSON.parse(localStorage.getItem("favorites")) || [];
+}
+
+function saveFavoritesToLocalStorage(favorites) {
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}
 
 const subscribeWidget = document.querySelector(".subscribe-widget");
 const subscribeButtonWidget = subscribeWidget.querySelector(".submit-btn");

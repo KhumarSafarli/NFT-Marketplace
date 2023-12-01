@@ -62,7 +62,7 @@ async function loginUser() {
     showSuccessToast("Login successful!");
     setTimeout(() => {
       window.location.href = "../home.html";
-    }, 2000);
+    }, 1000);
   } else {
     const data = await response.json();
     showToast("Invalid username or password");

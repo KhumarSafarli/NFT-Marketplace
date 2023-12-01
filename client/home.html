@@ -4,14 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <script defer src="./common/constants.js"></script>
-  <script defer src="./pages/home/home.js"></script>
-  <script defer src="./common/subscribtion.js"></script>
-
+    <script defer src="./common/constants.js"></script>
+    <script defer src="./pages/home/home.js"></script>
+    <script defer src="./common/subscribtion.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./scss/main.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
     <title>Home Page</title>
   </head>
   <header>
@@ -22,6 +32,9 @@
           <a href="./home.html">NFT Marketplace</a>
         </div>
         <div class="right-side">
+          <a href="./pages/favorites/favorites.html" class="favorite"
+            >Favorites</a
+          >
           <a href="./pages/marketplace/marketplace.html">Marketplace</a>
           <a href="./pages/ranking/ranking.html">Rankings</a>
           <a href="./pages/login.html" class="login">Login</a>
@@ -150,13 +163,7 @@
             </button>
           </div>
         </div>
-        <div class="artists-grid">
-          
-          </div>
-          
-          
-          
-        </div>
+        <div class="artists-grid"></div>
         <button class="view-bottom">
           <img src="./assets/icons/rocket.svg" />View Rankings
         </button>
@@ -502,8 +509,6 @@
             </div>
           </div>
         </div>
-        
-
       </div>
       <div class="border-line"></div>
     </div>

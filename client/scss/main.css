@@ -649,6 +649,23 @@ header .navbar-container .navbar .right-side .sidebar-icon {
   position: relative;
   cursor: pointer;
 }
+.artist-card i {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10px;
+  right: 10px;
+  color: grey;
+  font-size: 16px;
+  transition: 0.2s;
+}
+.artist-card i:hover {
+  transform: scale(1.1);
+  color: rgba(255, 0, 0, 0.281);
+}
+.artist-card i.heart-icon-clicked {
+  color: red;
+}
 .artist-card:hover {
   transform: scale(0.94);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;

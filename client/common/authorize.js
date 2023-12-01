@@ -98,7 +98,7 @@ async function signUpUser() {
     showSuccessToast("Account created, please login!");
     setTimeout(() => {
       window.location.href = "login.html";
-    }, 2000);
+    }, 1000);
   } else {
     const data = await response.json();
     showToast("Username is already used");

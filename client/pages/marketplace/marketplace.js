@@ -3,7 +3,7 @@ const searchForm = document.querySelector(".search");
 const searchInput = document.getElementById("searchInput");
 const showMoreBtn = document.querySelector(".skip-btn");
 let skip = 0;
-searchStr = "";
+let searchStr = "";
 showMoreBtn.addEventListener("click", async () => {
   const data = await getNftsFromApi(marketplaceNftCard.children.length);
   if (!data.hasMore) {

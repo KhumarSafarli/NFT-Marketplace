@@ -4,20 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketplace</title>
+    <title>Favorites</title>
     <link rel="stylesheet" href="../../scss/main.css" />
+    <script defer src="./favorites.js"></script>
     <script defer src="../../common/constants.js"></script>
-    <script defer src="../../common/subscribtion.js"></script>
-    <script defer src="./marketplace.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
   </head>
   <body>
     <header>
@@ -42,70 +32,25 @@
         </div>
       </div>
     </header>
-    <div class="subhead">
-      <div class="subhead-container">
-        <div class="headline">
-          <h1>Browse Marketplace</h1>
-          <p>Browse through more than 50k NFTs on the NFT Marketplace.</p>
+    <div class="toprated">
+      <div class="toprated-container">
+        <div class="top-part">
+          <div class="left">
+            <h3>Your Favorite Creators</h3>
+            <p>Checkout your top favorite Creators on the NFT Marketplace</p>
+          </div>
+          <div class="right">
+            <button class="view">
+              <img src="../../assets/icons/rocket.svg" />View Rankings
+            </button>
+          </div>
         </div>
-        <div class="searchbar">
-          <form class="search">
-            <input
-              type="text"
-              id="searchInput"
-              class="searchInput"
-              name="searchInput"
-              placeholder="Search your favourite NFTs"
-            />
-          </form>
-
-          <img src="../../assets/icons/search.svg" />
-        </div>
+        <div class="artists-grid"></div>
+        <button class="view-bottom">
+          <img src="../../assets/icons/rocket.svg" />View Rankings
+        </button>
       </div>
     </div>
-    <div class="collection">
-      <div class="border-line"></div>
-      <div class="collection-container">
-        <div class="created">
-          <p>NFTs</p>
-          <div class="quantity">302</div>
-        </div>
-
-        <div class="artist-collection">
-          <p>Collections</p>
-          <div class="quantity">67</div>
-        </div>
-      </div>
-    </div>
-    <div class="nft-cards-section">
-      <div class="nft-container">
-        <!-- <div class="nft-card">
-              <img src="../../assets/images/distantgalaxy.png" class="head" />
-              <div class="info-part">
-                <div class="middle-part">
-                  <h4>Distant Galaxy</h4>
-                  <div class="user-info">
-                    <img src="../../assets/images/avatar1.png" class="avatar" />
-                    <p class="username">MoonDancer</p>
-                  </div>
-                </div>
-                <div class="footer-info">
-                  <div class="left">
-                    <p class="price">Price</p>
-                    <p class="cost">1.63 ETH</p>
-                  </div>
-                  <div class="right">
-                    <p class="price">Highest Bid</p>
-                    <p class="cost">0.33 ETH</p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-      </div>
-    </div>
-    <button class="skip-btn">
-      <img src="../../assets/icons/showmore.svg" />
-    </button>
     <div class="page-footer">
       <div class="footer-container">
         <div class="nft-marketplace">
