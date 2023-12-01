@@ -2740,6 +2740,7 @@ form .submit:hover {
   top: 0;
   right: 0;
   position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .sidebar a {
   color: white;
